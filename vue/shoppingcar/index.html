@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>购物车实例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <template v-if="this.list.length">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2">商品名称</th>
+                        <th>商品单价</th>
+                        <th>购买数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in list">
+                        <td>{{ index + 1 }}</td>
+                        <td>
+                            <input type="checkbox"
+                            :value="index"
+                            :checked="item.chose">
+                        </td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>
+                            <button @click="goodReduce(index)">-</button>
+                            {{ item.count }}
+                            <button @click="goodAdd(index)">+</button>
+                        </td>
+                        <td>
+                            <button @click="goodRemove(index)">移除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            全选 <input type="checkbox" :checked="allChose" @change="chooseAll">
+                        </td>
+                        <td>总价</td>
+                        <td colspan="4">￥ <span class="total">{{ totalPrice }}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </template>
+        <div class="empty" v-else>购物车是空的哟~~</div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
