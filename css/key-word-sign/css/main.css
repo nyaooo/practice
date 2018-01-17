@@ -1,0 +1,42 @@
+html {
+    font-size: 24px;
+}
+.container {
+    margin: 100px auto;
+    padding: 32px;
+    width: 600px;
+    height: 200px;
+}
+.red-white {
+    background-color: red;
+    color: #fff;
+}
+.yellow-brown {
+    background-color: yellow;
+    color: brown;
+}
+.ks-warpper {
+    display: inline-block;
+    position: relative;
+    margin: .6em 0;
+    padding: 0 .5em;
+    letter-spacing: .2em;
+}
+.ks-key-word {
+    display: inline-block;
+    position: absolute;
+    top: -.35em;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    background-color: inherit;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.ks-placeholder {
+    display: inline-block;
+    width: 2.3em;
+    text-align: center;
+}
