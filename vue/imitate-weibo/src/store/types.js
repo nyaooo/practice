@@ -1,0 +1,5 @@
+export const HEADBAR_SHOW = 'HEADBAR_SHOW'
+export const HEADBAR_HIDE = 'HEADBAR_HIDE'
+
+export const FOOTBAR_SHOW = 'FOOTBAR_SHOW'
+export const FOOTBAR_HIDE = 'FOOTBAR_HIDE'

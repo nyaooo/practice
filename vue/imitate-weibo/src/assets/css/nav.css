@@ -1,0 +1,24 @@
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+.nav-mt45 {
+    margin-top: 45px;
+}
+.nav-item {
+    color: #666666;
+    letter-spacing: .1em;
+}
+.mint-navbar .mint-tab-item.is-selected {
+    border-bottom-color: #ff5722;
+    color: #ff5722;
+    font-weight: 600;
+}
+.divider {
+    height: 3px;
+    background-color: #fff;
+    box-shadow: 0 4px 5px #828282;
+}

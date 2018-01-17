@@ -1,0 +1,101 @@
+#findperson {
+    background-color: inherit;
+  }
+  .nears-title {
+    padding-right: 1em;
+    font-size: .9em;
+    overflow: hidden;
+  }
+  .nears-title p {
+    float: left;
+  }
+  .all-friends {
+    float: right;
+    color: #5f93c4;
+  }
+  .nears-list {
+    padding: 14px .6em 8px;
+  }
+  .nears-list ul {
+    list-style: none;
+  }
+  .nears-list ul li {
+    display: inline-block;
+    margin-right: .4em;
+    text-align: center;
+  }
+  .nears-list ul li a {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    color: #666666;
+  }
+  .nears-name {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .nears-list ul li a img {
+    width: inherit;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+  }
+  .interes-title {
+    padding: 5px 0 5px 1em;
+    font-size: .8em;
+    color: #999999;
+  }
+  .interes-list {
+    padding: 12px 0 12px .6em;
+  }
+  .interes-info {
+    display: inline-flex;
+    margin-bottom: 1em;
+  }
+  .interes-list .interes-info:last-of-type {
+    margin-bottom: 0;
+  }
+  .info-pic {
+    width: 20%;
+  }
+  .info-pic img {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+  }
+  .info-detail {
+    display: flex;
+    margin-left: .8em;
+    width: 78%;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  .info-text {
+    width: 75%;
+  }
+  .info-id {
+    margin: .2em 0;
+    color: #666666;
+    font-size: .9em;
+  }
+  .info-intro {
+    color: #999999;
+    font-size: .8em;
+  }
+  .info-id, .info-intro {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .info-fnc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+  }
+  .add-follow {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 transparent;
+  }
