@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+dialog {
+    margin: 0 auto;
+    padding: 0;
+    width: 478px;
+    border: 0;
+    border-radius: 8px;
+}
+dialog > header {
+    padding: 26px 16px 10px;
+    text-align: center;
+}
+dialog > main {
+    padding: 10px 26px;
+}
+dialog > footer {
+    padding: 5px 16px 21px;
+    text-align: right;
+}
+/* dialog::backdrop {
+    background-color: rgba(0, 0, 0, .3);
+} */
+dialog + .backdrop {
+    background-color: rgba(0, 0, 0, .3);
+}
+.container {
+    margin: 30px 0 30px 100px;
+    padding: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 0 12px;
+    height: 32px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #fff;
+    background-color: #1890ff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+.btn:active {
+    background-color: #1e82df;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+}

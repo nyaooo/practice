@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML5.2 dialog标签</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="open_modal" class="btn">点我显示</button>
+        <br>
+        <br>
+        <p>returnValue: <span id="modal_returnValue"></span></p>
+        <dialog id="modal">
+            <header>
+                <h3>我是dialog的title</h3>
+            </header>
+            <main>
+                <p>文本内容</p>
+            </main>
+            <footer>
+                <button class="btn" id="return_value_modal">RETURN</button>
+                <button class="btn" id="close_modal">关闭</button>
+            </footer>
+        </dialog>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
