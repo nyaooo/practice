@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,14 @@
         }
     </style>
 </head>
+
 <body>
     <div id="app" v-cloak>
         <template v-if="this.list.length">
             <table>
                 <thead>
                     <tr>
-                        <th></th>
+                        <th colspan="2">商品分类</th>
                         <th colspan="2">商品名称</th>
                         <th>商品单价</th>
                         <th>购买数量</th>
@@ -26,31 +28,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(item, index) in list">
-                        <td>{{ index + 1 }}</td>
-                        <td>
-                            <input type="checkbox"
-                            :value="index"
-                            :checked="item.chose">
-                        </td>
-                        <td>{{ item.name }}</td>
-                        <td>{{ item.price }}</td>
-                        <td>
-                            <button @click="goodReduce(index)">-</button>
-                            {{ item.count }}
-                            <button @click="goodAdd(index)">+</button>
-                        </td>
-                        <td>
-                            <button @click="goodRemove(index)">移除</button>
-                        </td>
-                    </tr>
+                    <template v-for="items in list">
+                        <tr v-for="(item, index) in items">
+                            <td v-if="index === 0"
+                                :rowspan="items.length"
+                            >{{ item.type }}</td>
+                            <td>{{ index + 1 }}</td>
+                            <td>
+                                <input type="checkbox"
+                                    :value="item.id"
+                                    :checked="item.chose"
+                                    @change="chooseOne(item.id, index)">
+                            </td>
+                            <td>{{ item.name }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>
+                                <button @click="goodReduce(item.id, index)">-</button>
+                                {{ item.count }}
+                                <button @click="goodAdd(item.id, index)">+</button>
+                            </td>
+                            <td>
+                                <button @click="goodRemove(item.id, index)">移除</button>
+                            </td>
+                        </tr>
+                    </template>
                     <tr>
-                        <td></td>
+                        <td colspan="2"></td>
                         <td>
-                            全选 <input type="checkbox" :checked="allChose" @change="chooseAll">
+                            全选
+                            <input type="checkbox" :checked="allChose" @change="chooseAll">
                         </td>
                         <td>总价</td>
-                        <td colspan="4">￥ <span class="total">{{ totalPrice }}</span></td>
+                        <td colspan="4">￥
+                            <span class="total">
+                                {{ totalPrice }}
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -61,4 +74,5 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
