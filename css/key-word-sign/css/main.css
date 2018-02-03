@@ -19,7 +19,7 @@ html {
     display: inline-block;
     position: relative;
     margin: .6em 0;
-    padding: 0 .5em;
+    padding: 0 .2em;
     letter-spacing: .2em;
 }
 .ks-key-word {
@@ -35,8 +35,14 @@ html {
     font-size: 1.4em;
     font-weight: 600;
 }
+.ks-key-begin {
+    left: -.15em;
+}
+.ks-key-end {
+    right: -.15em;
+}
 .ks-placeholder {
     display: inline-block;
-    width: 2.3em;
+    width: 2.2em;
     text-align: center;
 }

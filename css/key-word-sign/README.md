@@ -2,7 +2,7 @@
 
 在公交车上无意间看到的广告样式，就想能不能用css来实现。
 
-![](https://ws1.sinaimg.cn/large/82d73c4bgy1fnjuu6vkhtj208x050jrc.jpg)
+![](https://ws1.sinaimg.cn/large/82d73c4bgy1fo3b884791j207m0483yl.jpg)
 
 ## 使用
 
