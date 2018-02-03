@@ -1,4 +1,4 @@
-function randerKs () {
+(function () {
     // 获取所有调用了插件的元素
     var _list = document.querySelectorAll('.ks-warpper');
     console.log(_list[0].innerHTML);
@@ -13,6 +13,4 @@ function randerKs () {
         _str[_keyWordIndex] = "<span class='ks-key-word'>" + _keyWord + "</span><span class='ks-placeholder'></span>";
         item.innerHTML = _str.join('')
     })
-}
-
-window.onload = randerKs;
+})()
