@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>自定义指令-时间格式化</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div v-time="timeNow"></div>
+        <div v-time="timeSecondsBefore"></div>
+        <div v-time="timeMinutesBefore"></div>
+        <div v-time="timeHoursBefore"></div>
+        <div v-time="timeDaysBefore"></div>
+        <div v-time="timeMouthsBefore"></div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
