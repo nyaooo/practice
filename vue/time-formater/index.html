@@ -19,9 +19,16 @@
         <div v-time="timeHoursBefore"></div>
         <div v-time="timeDaysBefore"></div>
         <div v-time="timeMouthsBefore"></div>
+        <br>
+        <div>
+            出生日期：{{ myBirthdayDate }}
+            <br>
+            具体年龄：<span v-birthday="myBirthday"></span>
+        </div>
     </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/birthday.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

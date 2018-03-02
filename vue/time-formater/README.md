@@ -4,7 +4,13 @@ Vue轮子，时间格式化指令v-time。
 
 ![](https://ws1.sinaimg.cn/large/82d73c4bgy1foy9ynjduaj204x040q2z.jpg)
 
-将系统的Unix时间戳，格式化成可读性更友好的文字。
+将Unix时间戳，格式化成可读性更友好的文字。
+
+Vue轮子，生日格式化指令v-birthday
+
+![](https://ws1.sinaimg.cn/large/82d73c4bgy1foyb6sjadzj206x01iq2z.jpg)
+
+将Unix时间戳，格式化为具体年龄。
 
 ## 小结
 1. 要自定义指令的的几个钩子函数，以及包含的参数（Eg：el，binding）
