@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>下拉菜单-自定义指令</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div class="dropdown-wallpaper" v-clickoutside.esc="handleClose">
+            <button class="btn" @click="show = !show">菜单</button>
+            <div class="dropdown-menu" v-show="show">
+                <ul>
+                    <li>选项1</li>
+                    <li>选项2</li>
+                    <li>选项3</li>
+                    <li>选项4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

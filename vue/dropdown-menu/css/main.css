@@ -1,0 +1,62 @@
+[v-cloak] {
+    display: none;
+}
+html {
+    font-size: 16px;
+}
+.dropdown-wallpaper {
+    position: relative;
+    margin-top: 25px;
+    margin-left: 100px;
+    width: 150px;
+    text-align: center;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #999;
+}
+.dropdown-menu ul { 
+    margin: 0;
+    padding: 0;
+}
+.dropdown-menu ul li:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.dropdown-menu ul li:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.dropdown-menu ul li {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: .4em 0;
+    line-height: 32px;
+    text-align: center;
+}
+.dropdown-menu ul li:hover {
+    background: #00c9d0;
+    color: #fff;
+}
+.btn {
+    display:inline-block;
+    height: 32px;
+    padding: 0 2em;
+    background: #00c9d0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    line-height: 32px;
+    letter-spacing: .3em;
+    color: #fff;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #05a2a7;
+}
