@@ -1,0 +1,38 @@
+[v-cloak] {
+    display: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 18px;
+}
+th a {
+    margin-left: .5em;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+th a:hover {
+    color: #39f;
+}
+table {
+    border: 1px solid #777;
+    border-collapse: collapse;
+}
+td, th {
+    padding: .5em 2em;
+    border: 1px solid #777;
+}
+th {
+    background: #e7e7e7;
+    text-align: center;
+}
+.table-wallpaper {
+    width: 80%;
+    margin: 100px auto 0;
+}
+th a.sorted {
+    color: #39f;
+}
