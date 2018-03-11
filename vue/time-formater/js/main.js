@@ -21,7 +21,6 @@ const app = new Vue({
     directives: {
         time: {
             bind: function (el, binding) {
-                console.log(el)
                 el.innerHTML = Time.getFormatDate(binding.value)
                 el.__timeout__ = setInterval(function () {
                     el.innerHTML = Time.getFormatDate(binding.value)
