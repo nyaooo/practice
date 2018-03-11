@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+input {
+    width: 35px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+span {
+    font-weight: bold;
+}
+.countdown {
+    width: 200px;
+    height: 100px;
+    margin: 50px 0 0 100px;
+    text-align: center;
+}
+.btn-group {
+    margin-top: 32px;
+}
+.btn {
+    display: inline-block;
+    padding: 0 12px;
+    height: 32px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #fff;
+    background-color: #1890ff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+.btn-disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+.btn:active {
+    background-color: #1e82df;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+}
