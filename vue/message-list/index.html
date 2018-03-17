@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>留言列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="app" v-cloak style="margin-top: 50px;">
+        <div class="container clearfix mb-3">
+            <name-input v-model="username"></name-input>
+            <msg-input v-model="message" ref="message"></msg-input>
+            <button class="btn btn-primary float-right" @click="handleSend">发布</button>
+        </div>
+        <msg-list :list="list" @reply="handleReply" @delete="handleDelete"></msg-list>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
