@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 15px;
+}
+p {
+    margin: 1em 0;
+    color: #34495e;
+}
+body > section {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+section h1 {
+    font-size: 2em;
+    font-weight: normal;
+    letter-spacing: .3em;
+}
+section h1::before {
+    content: '§';
+    position: absolute;
+    padding: 0 .2em;
+    margin-left: -1em;
+    color: #c0c0c0;
+}
+.items-container {
+    padding: 20px 15px;
+    border-top: 1px solid #eef1f5;
+}
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item {
+    margin-top: 15px;
+    min-height: 30px;
+}
+.option-name {
+    display: inline-block;
+    margin-right: 2em;
+    width: 15%;
+}
+label[data-type=dradio], label[data-type=dnumber], label[data-type=dselect], div[data-type=dcheckbox] {
+    display: none;
+}
+input[type='text'] {
+    background-color: #fff;
+}
+input[type='checkbox'], input[type='radio'] {
+    margin-right: 8px;
+}
+.noborder {
+    border: none;
+}
+.inputs {
+    width: 160px;
+    padding: 3px 10px;
+    font-size: 1em;
+    letter-spacing: .5px;
+}
+.btn {
+    display: none;
+    padding: .6em 1.6em;
+    background: 0 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 0 0 5px #c0c0c0;
+}
+.btn.editBtn {
+    display: inline-block;
+    color: #fff;
+    background-color: #3598dc;
+    border-color: #3598dc;
+}
+.btn.editBtn:active {
+    background-color: #217ebd;
+    border-color: #217ebd;
+}
+.btn.cancelBtn {
+    color: #666;
+    background-color: #e1e5ec;
+    border-color: #e1e5ec;
+}
+.btn.cancelBtn:active {
+    background-color: #c2cad8;
+    border-color: #c2cad8;
+}

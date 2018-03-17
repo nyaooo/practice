@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>基于表单内容的编辑组件</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <section style="margin-top: 80px;">
+        <h1>示例</h1>
+        <p>
+            表单中，各种类型的选项，如下：
+        </p>
+        <div class="items-container">
+            <input class="btn editBtn" type="button" value="修改" onclick="editInformations()">
+            <input class="btn cancelBtn" type="button" value="取消" onclick="cancelEdit()">
+            <div class="item">
+                <span class="option-name">文本框输入类型：</span>
+                <label>
+                    <input class="noborder inputs" type="text" value="我是内容" data-type="dinput">
+                </label>
+            </div>
+            <div class="item">
+                <span class="option-name">单选类型：</span>
+                <input class="noborder inputs" type="text" data-type="dradio" value="是">
+                <label data-type="dradio">
+                    <input type="radio" name="radioOption" value="1">是
+                </label>
+                <label data-type="dradio" style="margin-left: 2em;">
+                    <input type="radio" name="radioOption" value="0">否
+                </label>
+            </div>
+            <div class="item">
+                <span class="option-name">数值类型：</span>
+                <label>
+                    <input class="noborder inputs" type="text" value="25.2" data-type="dnumber">
+                </label>
+                <label data-type="dnumber">
+                    <input class="inputs" type="number" min="0" step="0.1">
+                </label>
+            </div>
+            <div class="item">
+                <span class="option-name">多选类型：</span>
+                <textarea class="noborder inputs" data-type="dcheckbox" rows="1" cols="20" style="resize: none;background-color: transparent;font-family: inherit;">A,C</textarea>
+                <div data-type="dcheckbox">
+                    <label>
+                        <input type="checkbox" value="0">A
+                    </label>
+                    <label style="margin-left: 2em;">
+                        <input type="checkbox" value="1">B
+                    </label>
+                    <label style="margin-left: 2em;">
+                        <input type="checkbox" value="2">C
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <span class="option-name">下拉框类型：</span>
+                <label class="d-selects">
+                    <input class="noborder inputs" type="text" value="adidas" data-type="dselect">
+                </label>
+                <label data-type="dselect">
+                    <select class="inputs">
+                        <option value="0" data-txt="nike">nike</option>
+                        <option value="1" data-txt="adidas">adidas</option>
+                        <option value="2" data-txt="Under Armour">Under Armour</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
