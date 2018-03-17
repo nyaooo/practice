@@ -11,12 +11,19 @@ Vue.component('s-table', {
             default: () => {
                 return [];
             }
+        },
+        colsWidth: {
+            type: Array,
+            default: () => {
+                return [];
+            }
         }
     },
     data: function () {
         return {
             currentData: [],
-            currentColumns: []
+            currentColumns: [],
+            currentColsWidth: []
         }
     },
     render: function (h) {
@@ -60,8 +67,19 @@ Vue.component('s-table', {
             });
             trs.push(h('tr', tds));
         });
+        var cols = [];
+        this.currentColsWidth.forEach((item) => {
+            cols.push(
+                h('col', {
+                    attrs: {
+                        width: item
+                    }
+                })
+            )
+        })
 
         return h('table', [
+            h('colgroup', cols),
             h('thead', [
                 h('tr', ths)
             ]),
@@ -85,6 +103,10 @@ Vue.component('s-table', {
             this.currentData.forEach((row, index) => {
                 row._index = index;
             })
+        },
+        updateColsWidth() {
+            var _this = this;
+            this.currentColsWidth = JSON.parse(JSON.stringify(_this.colsWidth));
         },
         handleSortByAsc(index) {
             var key = this.currentColumns[index].key;
@@ -129,10 +151,14 @@ Vue.component('s-table', {
                     this.handleSortByDesc(sortedColumn[0]._index);
                 }
             }
+        },
+        colsWidth() {
+            this.updateColsWidth();
         }
     },
     mounted() {
         this.updateData();
         this.updateColumns();
+        this.updateColsWidth();
     }
 })
