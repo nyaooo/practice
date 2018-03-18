@@ -15,7 +15,15 @@ Vue.component('name-input', {
             this.updateValue();
         }
     },
-    render(h) {
+    template: `
+    <div class='input-group mb-3'>
+        <div class='input-group-prepend'>
+            <span class='input-group-text'>昵称：</span>
+        </div>
+        <input type='text' class='form-control' :value='this.currentValue' @input='handleInput'>
+    </div>
+    `,
+    /* render(h) {
         var _this = this;
 
         return h('div', {
@@ -47,10 +55,14 @@ Vue.component('name-input', {
                 }
             })
         ])
-    },
+    }, */
     methods: {
         updateValue() {
             this.currentValue = this.value;
+        },
+        handleInput() {
+            this.currentValue = event.target.value;
+            this.$emit('input', event.target.value);
         }
     }
 });
@@ -72,7 +84,19 @@ Vue.component('msg-input', {
             this.updateValue()
         }
     },
-    render(h) {
+    template: `
+    <div class='input-group mb-3'>
+        <div class='input-group-prepend'>
+            <span class='input-group-text'>留言内容：</span>
+        </div>
+        <textarea class='form-control' 
+                placeholder='请输入留言内容' 
+                ref='messageContent' 
+                :value='this.currentValue'
+                @input='handleInput'></textarea>
+    </div>
+    `,
+    /* render(h) {
         var _this = this;
 
         return h('div', {
@@ -105,13 +129,17 @@ Vue.component('msg-input', {
                 }
             })
         ])
-    },
+    }, */
     methods: {
         updateValue() {
             this.currentValue = this.value;
         },
         handleFocus() {
             this.$refs.messageContent.focus();
+        },
+        handleInput() {
+            this.currentValue = event.target.value;
+            this.$emit('input', event.target.value);
         }
     }
 })
